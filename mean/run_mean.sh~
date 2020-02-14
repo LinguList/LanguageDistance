@@ -1,0 +1,3 @@
+cat ../kullbackleibler/yy |./mean.perl ../perplexity/xx |./mean.perl ../ranking/zz |sort -g > mean.txt
+
+#cat ../kullbackleibler/yy |./mean.perl ../perplexity/xx  |sort -g > mean.txt

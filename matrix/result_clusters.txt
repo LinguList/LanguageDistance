@@ -1,0 +1,2 @@
+galdos_desheredada.txt:0.0772|galdos_fortunata.txt:0.0772|galdos_marianela.txt:0.0961|galdos_amigo_manso.txt:0.0994|galdos_trafalgar.txt:0.1186|
+clarin_regenta.txt:0.0849|clarin_unico_hijo.txt:0.0849|cervantes_quijote.txt:0.1431|

@@ -1,0 +1,33 @@
+#!/usr/bin/perl -w
+
+
+my $arq = shift(@ARGV);
+open(WORDLIST, $arq) || die "Can't open search-patterns: $!\n";
+
+while (my $token = <WORDLIST>) {
+    chomp $token;
+
+    $token = lc ($token);
+    $Wordlist{$token}++;
+}
+
+while (my $tok = <STDIN>) {
+    chomp $tok;
+    if ($tok eq "") {next}
+     if ( $tok =~ /http/){next}    
+   #  ($tok) = split(" ", $line);
+    
+     $tok = lc ($tok);
+    
+     $Dico{$tok}++ if ($Wordlist{$tok} ) ; #&& $tok =~ /\w/ ) ;
+     $N++;
+      
+      
+}
+
+
+foreach my $l (sort keys %Dico) {
+    $prob= ($Dico{$l} / $N) if ($N);
+    print "$l $prob\n";
+}
+
